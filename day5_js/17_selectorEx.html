@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        li:last-child{
+            padding:7px 14px;
+            margin:4px;
+        }
+        input,
+        label,
+        button{
+            font-size: 1.2rem;
+        }
+        input[type=text], input[type=number]{
+            width:200px;
+            padding: 7px 14px;
+            margin: 4px;
+        }
+        input [type=checkbox]:checked+label{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <input type="text" name="name" id="" placeholder="이름을 입력하세요">
+        </li>
+        <li>
+            <input type="number" name="age" id="" placeholder="나이를 입력하세요">
+        </li>
+        <li>
+            취미를 선택하세요
+        </li>
+        <li>
+            <input type="checkbox" name="hobby" id="swimming" value="수영">
+            <label for="swimming">수영</label>
+            <input type="checkbox" name="hobby" id="ski" value="스키">
+            <label for="ski">스키</label>
+            <input type="checkbox" name="hobby" id="football" value="축구">
+            <label for="football">축구</label>
+            <input type="checkbox" name="hobby" id="baseball" value="야구">
+            <label for="baseball">야구</label>
+            <input type="checkbox" name="hobby" id="running" value="달리기">
+            <label for="running">달리기</label>
+            
+        </li>
+        <button onclick="save()">저장하기</button>
+    </ul>
+</body>
+<script>
+    const name = document.querySelector('input[name="name"]')
+    const age = document.querySelector('input[name="age"]')
+    const temp = document.querySelector('input[name="checkbox"]')
+    const hobbes = document.querySelector('input[name="hobby"]:chacked')
+    function save(){
+        
+    }
+</script>
+</html>

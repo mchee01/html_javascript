@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>이벤트 핸들러 메소드 addEventListener</h3>
+    <hr>
+    <button id="hello" onclick="hello()">HELLO</button>
+    <button id="hi">hi</button>
+    <input type="text" id="message" placeholder="메세지를 입력하세요">
+    <pre style="font-size: 1rem;font-family: inherit;"></pre>
+    <script>
+        alert("hello")
+        console.log('클릭 이벤트에 대한 함수입니다. button 태그에 hello 함수 호출 명령이 있습니다.')
+        
+        document.getElementById('hi').addEventListener('click', function(){
+            alert('하이')
+            console.log('button 태그에 자바스크립트 코드를 작성하지 않고 이벤트 처리합니다.')
+        })
+        document.getElementById('message').addEventListener('change', ()=>{
+            const msg = document.getElementById('message')
+            console.log(msg.value)
+        })
+        document.getElementById('message').addEventListener('keydown',()=>{
+            const msg = document.getElementById('message')
+            console.log(msg.value)
+        })
+    </script>
+
+</body>
+</html>
